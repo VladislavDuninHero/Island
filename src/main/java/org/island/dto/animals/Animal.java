@@ -1,6 +1,8 @@
 package org.island.dto.animals;
 
-public abstract class Animal {
+import org.island.dto.AbstractIslandObject;
+
+public abstract class Animal extends AbstractIslandObject {
 
     String type;
     double weight;

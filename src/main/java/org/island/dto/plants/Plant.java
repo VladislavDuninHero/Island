@@ -1,4 +1,6 @@
 package org.island.dto.plants;
 
-public abstract class Plant {
+import org.island.dto.AbstractIslandObject;
+
+public abstract class Plant extends AbstractIslandObject {
 }

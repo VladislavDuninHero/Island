@@ -1,7 +1,10 @@
 package org.island.controllers;
 
 import lombok.AllArgsConstructor;
+import org.island.dto.Island.Cell;
 import org.island.dto.Island.Island;
+
+import java.util.Arrays;
 
 @AllArgsConstructor
 public class GenerateIslandService {
@@ -9,7 +12,10 @@ public class GenerateIslandService {
     private final int SIDEY;
 
     public Island generate() {
+        Cell[][] generated = new Cell[SIDEX][SIDEY];
 
-        return null;
+        Island island = new Island(generated);
+
+        return island;
     }
 }
