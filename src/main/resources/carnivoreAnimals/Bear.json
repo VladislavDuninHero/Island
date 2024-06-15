@@ -1,0 +1,6 @@
+{
+  "weight": 500,
+  "maxCountInOneCell": 5,
+  "maxCountCellInStep": 2,
+  "saturationOfEat": 80
+}

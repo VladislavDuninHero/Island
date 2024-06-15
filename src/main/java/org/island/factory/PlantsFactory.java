@@ -1,14 +1,24 @@
 package org.island.factory;
 
+import lombok.Getter;
+import org.island.controllers.SerializationJsonService;
+import org.island.dto.config.Config;
 import org.island.dto.plants.Herb;
 import org.island.dto.plants.Plant;
 
+import java.io.File;
 import java.util.Map;
 import java.util.function.Supplier;
 
 public class PlantsFactory {
+
+    SerializationJsonService serializationJsonService = new SerializationJsonService();
+    private final File HERB = new File("src/main/resources/plants/Herb.json");
+    private final Config HERB_CONFIG = serializationJsonService.parseJson(HERB);
+
+    @Getter
     Map<Integer, Supplier<Plant>> plants = Map.ofEntries(
-            Map.entry(1, Herb::new)
+            Map.entry(1, () -> new Herb(HERB_CONFIG.getWeight(), HERB_CONFIG.getMaxCountInOneCell()))
     );
 
     public Plant createPlant(int id) {

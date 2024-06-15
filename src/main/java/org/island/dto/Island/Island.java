@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class Island {
-    private Cell[][] island;
+    private final Cell[][] island;
 
     public Cell[][] getIsland() {
         return this.island;
