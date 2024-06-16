@@ -1,4 +1,6 @@
 {
   "x": 100,
-  "y": 20
+  "y": 20,
+  "initialOrganismsLimit": 10,
+  "timeOfSimulation": 20
 }

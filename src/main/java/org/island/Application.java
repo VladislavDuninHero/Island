@@ -1,8 +1,6 @@
 package org.island;
 
-import org.island.controllers.FillIslandService;
-import org.island.controllers.GenerateIslandService;
-import org.island.controllers.GenerateRandomService;
+import org.island.controllers.*;
 import org.island.dto.Island.Island;
 import org.island.factory.AnimalsFactory;
 import org.island.factory.PlantsFactory;
@@ -13,11 +11,21 @@ import java.util.Arrays;
 public class Application {
     UserInterfaceRunner userInterfaceRunner = new UserInterfaceRunner();
     GenerateIslandService generateIslandService = new GenerateIslandService(2, 2);
-    FillIslandService fillIslandService = new FillIslandService(new AnimalsFactory(), new PlantsFactory(), new GenerateRandomService());
+    FillIslandService fillIslandService = new FillIslandService(
+            new AnimalsFactory(),
+            new PlantsFactory(),
+            new GenerateRandomService()
+    );
+    SimulationService simulationService = new SimulationService();
 
     public void start() {
         userInterfaceRunner.run();
+
         Island island = generateIslandService.generate();
+
         fillIslandService.fillIsland(island);
+
+        simulationService.runSimulation(island);
+
     }
 }

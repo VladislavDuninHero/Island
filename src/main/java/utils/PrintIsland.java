@@ -3,6 +3,8 @@ package utils;
 import org.island.dto.Island.Cell;
 import org.island.dto.Island.Island;
 
+import java.util.Map;
+
 public class PrintIsland {
     public void print(Island island) {
         Cell[][] myIsland = island.getIsland();
@@ -20,5 +22,13 @@ public class PrintIsland {
                 System.out.println(myIsland[i][j].getOrganisms());
             }
         }
+    }
+
+    public String printStatistic(Map<String, Integer> statistic) {
+
+        return "CARNIVORE : " + statistic.get("Carnivores")
+                + "\n" + "HERBIVORE : " + statistic.get("Herbivores")
+                + "\n" + "PLANTS : " + statistic.get("Plants");
+
     }
 }
