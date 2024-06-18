@@ -1,9 +1,17 @@
 package org.island.dto.animals.herbivore;
 
+import lombok.Getter;
+import lombok.ToString;
+import org.island.controllers.GetConfigsService;
 import org.island.dto.animals.Herbivore;
+import org.island.dto.config.AnimalConfig;
 
+@Getter
+@ToString
 public class Mouse extends Herbivore {
-    public Mouse(double weight, int maxCountInOneCell, int maxCountCellInStep, double saturationOfEat) {
-        super(weight, maxCountInOneCell, maxCountCellInStep, saturationOfEat);
-    }
+    GetConfigsService getConfigsService = new GetConfigsService();
+
+    private final AnimalConfig MOUSE_CONFIG = getConfigsService.getMOUSE_CONFIG();
+
+    private final double weight = MOUSE_CONFIG.getWeight();
 }

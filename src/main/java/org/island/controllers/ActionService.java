@@ -11,12 +11,8 @@ import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ActionService {
-    private final List<Actions> actions = new CopyOnWriteArrayList<>(
-            List.of(
-                    Actions.MOVE,
-                    Actions.EAT
-            )
-    );
+
+    List<Actions> actions = new CopyOnWriteArrayList<>(List.of(Actions.MOVE, Actions.EAT));
 
     public Actions generateRandomAction() {
         int randomAction = new Random().nextInt(0, actions.size());

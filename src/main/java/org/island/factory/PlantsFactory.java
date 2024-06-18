@@ -14,11 +14,11 @@ public class PlantsFactory {
 
     SerializationJsonService serializationJsonService = new SerializationJsonService();
     private final File HERB = new File("src/main/resources/plants/Herb.json");
-    private final AnimalConfig HERB_Animal_CONFIG = serializationJsonService.parseJson(HERB);
+    private final AnimalConfig HERB_CONFIG = serializationJsonService.parseJson(HERB);
 
     @Getter
     Map<Integer, Supplier<Plant>> plants = Map.ofEntries(
-            Map.entry(1, () -> new Herb(HERB_Animal_CONFIG.getWeight(), HERB_Animal_CONFIG.getMaxCountInOneCell()))
+            Map.entry(1, () -> new Herb(HERB_CONFIG.getWeight(), HERB_CONFIG.getMaxCountInOneCell()))
     );
 
     public Plant createPlant(int id) {

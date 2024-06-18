@@ -16,13 +16,13 @@ public class SimulationService {
     private final ScheduledExecutorService calcStatistic = Executors.newScheduledThreadPool(1);
     private final int TIME_OF_SIMULATION = 10;
 
-    private final AnimalLifeCycle animalLifeCycle = new AnimalLifeCycle();
 
     public void runSimulation(Island island) {
+
         Cell[][] myIsland = island.getIsland();
 
+        AnimalLifeCycle animalLifeCycle = new AnimalLifeCycle(island);
         StatisticExecutor statisticExecutor = new StatisticExecutor(island);
-
 
         movingAnimals.scheduleAtFixedRate(animalLifeCycle, 0, 5, TimeUnit.SECONDS);
         calcStatistic.scheduleAtFixedRate(statisticExecutor, 0, 5, TimeUnit.SECONDS);

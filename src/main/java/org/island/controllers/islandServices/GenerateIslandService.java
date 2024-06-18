@@ -1,4 +1,4 @@
-package org.island.controllers;
+package org.island.controllers.islandServices;
 
 import lombok.AllArgsConstructor;
 import org.island.dto.Island.Cell;

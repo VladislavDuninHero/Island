@@ -1,5 +1,6 @@
-package org.island.controllers;
+package org.island.controllers.animalsServices;
 
+import org.island.controllers.GenerateRandomService;
 import org.island.dto.Island.Cell;
 import org.island.dto.Island.Coordinate;
 import org.island.dto.Island.Island;

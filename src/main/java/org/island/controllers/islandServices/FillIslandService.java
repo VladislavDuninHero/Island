@@ -1,6 +1,7 @@
-package org.island.controllers;
+package org.island.controllers.islandServices;
 
 import lombok.AllArgsConstructor;
+import org.island.controllers.GenerateRandomService;
 import org.island.dto.Island.Cell;
 import org.island.dto.Island.Island;
 import org.island.factory.AnimalsFactory;
@@ -17,7 +18,7 @@ public class FillIslandService {
     private final PlantsFactory plantsFactory;
     private final GenerateRandomService generateRandomService;
     private final PrintIsland printIsland = new PrintIsland();
-    private final int INITIAL_LIMIT = 10;
+    private final int INITIAL_LIMIT = 2;
 
     public void fillIsland(Island island) {
         Cell[][] myIsland = island.getIsland();
