@@ -14,7 +14,7 @@ public class PlantsFactory {
 
     SerializationJsonService serializationJsonService = new SerializationJsonService();
     private final File HERB = new File("src/main/resources/plants/Herb.json");
-    private final AnimalConfig HERB_CONFIG = serializationJsonService.parseJson(HERB);
+    private final AnimalConfig HERB_CONFIG = serializationJsonService.parseAnimalJson(HERB);
 
     @Getter
     Map<Integer, Supplier<Plant>> plants = Map.ofEntries(
