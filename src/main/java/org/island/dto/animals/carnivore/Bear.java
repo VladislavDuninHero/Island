@@ -9,6 +9,8 @@ import org.island.dto.config.AnimalConfig;
 @ToString
 @Getter
 public class Bear extends Carnivore {
+    private final String type = "bear";
+
     private final GetConfigsService getConfigsService = new GetConfigsService();
 
     private final AnimalConfig BEAR_CONFIG = getBEAR_CONFIG();

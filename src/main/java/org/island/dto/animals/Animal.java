@@ -1,6 +1,5 @@
 package org.island.dto.animals;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.island.dto.AbstractIslandObject;

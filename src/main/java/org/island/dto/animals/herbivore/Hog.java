@@ -9,6 +9,7 @@ import org.island.dto.config.AnimalConfig;
 @Getter
 @ToString
 public class Hog extends Herbivore {
+    private final String type = "hog";
     GetConfigsService getConfigsService = new GetConfigsService();
 
     private final AnimalConfig HOG_CONFIG = getConfigsService.getHOG_CONFIG();

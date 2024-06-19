@@ -100,7 +100,5 @@ k
 ;src/main/java/org/island/controllers/GetConfigsService.java,9\1\918a14eedeeb69c055230fa2e7995e7bf02740af
 g
 7src/main/java/org/island/controllers/ChanceService.java,a\7\a7fc791262386aca89361a5435719d1ad640444f
-e
-5src/main/java/org/island/dto/config/ChanceConfig.java,3\e\3eafb96bbb5057ad8d1725a95d67712be0c270f8
 ~
 Nsrc/main/java/org/island/controllers/islandServices/GenerateIslandService.java,c\a\ca9170548fae4281700a8097a147d94f6e3167a0
