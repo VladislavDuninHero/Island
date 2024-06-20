@@ -1,6 +1,19 @@
 {
+  "type": "wolf",
   "weight": 50,
   "maxCountInOneCell": 30,
   "maxCountCellInStep": 3,
-  "saturationOfEat": 8
+  "saturationOfEat": 8,
+  "chanceOfEating": {
+    "self": 0,
+    "bear": 0,
+    "eagle": 0,
+    "lion": 0,
+    "buffalo": 50,
+    "caterpillar": 0,
+    "hog": 50,
+    "mouse": 80,
+    "rabbit": 80,
+    "sheep": 90
+  }
 }

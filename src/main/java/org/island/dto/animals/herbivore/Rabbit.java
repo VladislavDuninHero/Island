@@ -10,9 +10,7 @@ import org.island.dto.config.AnimalConfig;
 @ToString
 public class Rabbit extends Herbivore {
 
-    GetConfigsService getConfigsService = new GetConfigsService();
+    private final String type = "rabbit";
 
-    private final AnimalConfig RABBIT_CONFIG = getConfigsService.getRABBIT_CONFIG();
-
-    private final double weight = RABBIT_CONFIG.getWeight();
+    private final double weight = 2;
 }

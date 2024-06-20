@@ -11,4 +11,6 @@ public abstract class Animal extends AbstractIslandObject {
     private int maxCountInOneCell;
     private int maxCountCellInStep;
     private double saturationOfEat;
+    private String type;
+    private String configPath;
 }

@@ -2,7 +2,7 @@ package org.island.multithreading;
 
 import lombok.AllArgsConstructor;
 import org.island.controllers.ActionService;
-import org.island.controllers.GenerateRandomService;
+import org.island.controllers.animalsServices.feedingServices.EatingAnimalsService;
 import org.island.controllers.animalsServices.MovingService;
 import org.island.dto.AbstractIslandObject;
 import org.island.dto.Island.Cell;
@@ -20,6 +20,7 @@ public class AnimalLifeCycle implements Runnable {
         Cell[][] myIsland = island.getIsland();
 
         MovingService movingService = new MovingService();
+        EatingAnimalsService eatingAnimalsService = new EatingAnimalsService();
         ActionService actionService = new ActionService();
 
         for (int i = 0; i < myIsland.length; i++) {
@@ -38,7 +39,8 @@ public class AnimalLifeCycle implements Runnable {
                         }
 
                         if (action == Actions.EAT) {
-
+                            eatingAnimalsService.startFeeding(
+                                    myIsland[i][j].getOrganisms(), myIsland[i][j].getOrganisms().get(k));
                         }
                     }
                 }

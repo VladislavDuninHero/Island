@@ -11,7 +11,7 @@ public class GetConfigsService {
 
     private final File BEAR = new File("src/main/resources/carnivoreAnimals/Bear.json");
     @Getter
-    private final AnimalConfig BEAR_CONFIG = serializationJsonService.parseOrganismJson(BEAR);
+    private final AnimalConfig bearConfig = serializationJsonService.parseOrganismJson(BEAR);
 
     private final File EAGLE = new File("src/main/resources/carnivoreAnimals/Eagle.json");
     @Getter

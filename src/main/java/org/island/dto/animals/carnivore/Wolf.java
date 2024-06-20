@@ -13,12 +13,12 @@ import java.util.Map;
 
 @ToString
 @Getter
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Wolf extends Carnivore {
     private final String type = "wolf";
 
-    GetConfigsService getConfigsService = new GetConfigsService();
+    private final double weight = 50;
 
-    private final AnimalConfig WOLF_CONFIG = getConfigsService.getWOLF_CONFIG();
+    private String configPath = "src/main/resources/carnivoreAnimals/Wolf.json";
 
-    private final double weight = WOLF_CONFIG.getWeight();
 }

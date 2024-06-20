@@ -9,9 +9,7 @@ import org.island.dto.config.AnimalConfig;
 @Getter
 @ToString
 public class Caterpillar extends Herbivore {
-    GetConfigsService getConfigsService = new GetConfigsService();
+    private final String type = "caterpillar";
 
-    private final AnimalConfig CATERPILLAR_CONFIG = getConfigsService.getCATERPILLAR_CONFIG();
-
-    private final double weight = CATERPILLAR_CONFIG.getWeight();
+    private final double weight = 0.01;
 }

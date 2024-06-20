@@ -9,9 +9,7 @@ import org.island.dto.config.AnimalConfig;
 @Getter
 @ToString
 public class Sheep extends Herbivore {
-    GetConfigsService getConfigsService = new GetConfigsService();
+    private final String type = "sheep";
 
-    private final AnimalConfig SHEEP_CONFIG = getConfigsService.getSHEEP_CONFIG();
-
-    private final double weight = SHEEP_CONFIG.getWeight();
+    private final double weight = 70;
 }

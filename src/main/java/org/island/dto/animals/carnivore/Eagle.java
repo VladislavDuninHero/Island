@@ -10,9 +10,6 @@ import org.island.dto.config.AnimalConfig;
 @Getter
 public class Eagle extends Carnivore {
     private final String type = "eagle";
-    GetConfigsService getConfigsService = new GetConfigsService();
 
-    private final AnimalConfig EAGLE_CONFIG = getConfigsService.getEAGLE_CONFIG();
-
-    private final double weight = EAGLE_CONFIG.getWeight();
+    private final double weight = 6;
 }
