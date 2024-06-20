@@ -10,5 +10,6 @@ public class Main {
         new Application().start();
         FeedService feedService = new FeedService();
         feedService.feed(new Wolf(), new Hog());
+
     }
 }
