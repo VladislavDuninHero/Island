@@ -19,6 +19,9 @@ public class ChancesOfEating {
     private int eagle;
 
     @JsonProperty
+    private int wolf;
+
+    @JsonProperty
     private int lion;
 
     @JsonProperty

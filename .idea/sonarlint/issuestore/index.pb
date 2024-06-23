@@ -88,10 +88,6 @@ e
 5src/main/java/org/island/dto/config/IslandConfig.java,c\a\ca5c2158cf0f85053ebc263df0dd30356ff415fb
 k
 ;src/main/java/org/island/multithreading/PlantLifeCycle.java,0\1\01a630111d51e7977d6f9b4f6fa8c43b3f9a8c05
-t
-Dsrc/main/java/org/island/controllers/animalsServices/EatService.java,e\b\eb21d721fbfcab36ab1feb3220b9744ed7171190
-u
-Esrc/main/java/org/island/controllers/animalsServices/FeedService.java,c\3\c30c42d881fefaec8aa5c683d2f2e0744341b26c
 z
 Jsrc/main/java/org/island/controllers/islandServices/FillIslandService.java,8\3\834114f17db523c13cc40dbddb4f0a767ac1e9a0
 w
@@ -102,12 +98,6 @@ g
 7src/main/java/org/island/controllers/ChanceService.java,a\7\a7fc791262386aca89361a5435719d1ad640444f
 ~
 Nsrc/main/java/org/island/controllers/islandServices/GenerateIslandService.java,c\a\ca9170548fae4281700a8097a147d94f6e3167a0
-}
-Msrc/main/java/org/island/controllers/animalsServices/FindEateableService.java,3\7\375c7cc12ca1228c92e7a3e7fc53ff503042f4d7
-~
-Nsrc/main/java/org/island/controllers/animalsServices/EatingAnimalsService.java,c\b\cb93ec611df34dee36d2c8d21b4210f52b9d5636
-L
-src/test/java/TestClass.java,6\b\6be141d872f01fabc0aa47dcfac0eba5e30ab76e
 ç
 ]src/main/java/org/island/controllers/animalsServices/feedingServices/FindEateableService.java,9\3\93c961fa6c6e693916e4474cd83319f3c6bd5ecf
 é
@@ -118,7 +108,5 @@ Tsrc/main/java/org/island/controllers/animalsServices/feedingServices/EatService
 Usrc/main/java/org/island/controllers/animalsServices/feedingServices/FeedService.java,8\8\88fa981923924635a27b793640c0efb4b089e0b4
 
 Osrc/main/java/org/island/controllers/animalsServices/ContainsAnimalService.java,b\0\b02d5d627c54abd533abdf8fc1f59986479a3f81
-i
-9src/main/java/org/island/dto/animals/ChancesOfEating.java,8\3\83c715d69a5780c6b852dc8a59c87e34749ea356
 h
 8src/main/java/org/island/dto/config/ChancesOfEating.java,1\5\15f7cc0d8a8ca3471208b94e410aa75458f2687c

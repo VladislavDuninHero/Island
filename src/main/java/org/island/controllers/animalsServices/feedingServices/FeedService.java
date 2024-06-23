@@ -19,6 +19,21 @@ public class FeedService {
 
         System.out.println(animalConfig);
 
+        int chanceOfEat = switch (eatingAnimal.getType()) {
+            case "bear" -> animalConfig.getChanceOfEating().getBear();
+            case "wolf" -> animalConfig.getChanceOfEating().getWolf();
+            case "eagle" -> animalConfig.getChanceOfEating().getEagle();
+            case "self" -> animalConfig.getChanceOfEating().getSelf();
+            case "lion" -> animalConfig.getChanceOfEating().getLion();
+            case "buffalo" -> animalConfig.getChanceOfEating().getBuffalo();
+            case "caterpillar" -> animalConfig.getChanceOfEating().getCaterpillar();
+            case "hog" -> animalConfig.getChanceOfEating().getHog();
+            case "mouse" -> animalConfig.getChanceOfEating().getMouse();
+            case "rabbit" -> animalConfig.getChanceOfEating().getRabbit();
+            case "sheep" -> animalConfig.getChanceOfEating().getSheep();
+            default -> throw new IllegalArgumentException();
+        };
+
 //        chanceOfEat = animal.getChanceConfig().get(eatingAnimal.getType());
 //        int random = random.nextInt(0, 100);
 //
