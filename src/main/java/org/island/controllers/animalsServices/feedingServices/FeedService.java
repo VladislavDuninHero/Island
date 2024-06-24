@@ -1,5 +1,6 @@
 package org.island.controllers.animalsServices.feedingServices;
 
+import org.island.controllers.GenerateRandomService;
 import org.island.controllers.SerializationJsonService;
 import org.island.dto.AbstractIslandObject;
 import org.island.dto.animals.Animal;
@@ -11,11 +12,15 @@ import java.util.List;
 public class FeedService {
 
     SerializationJsonService serializationJsonService = new SerializationJsonService();
+    GenerateRandomService generateRandomService = new GenerateRandomService();
 
+    //todo попробовать исправить dto на map
+    //todo доделать съедение животного в зависимости от насыщения
     public boolean feed(Animal animal, Animal eatingAnimal) {
         boolean isAnimalFeeding = false;
 
         AnimalConfig animalConfig = serializationJsonService.parseOrganismJson(new File(animal.getConfigPath()));
+        AnimalConfig eatingAnimalConfig = serializationJsonService.parseOrganismJson(new File(eatingAnimal.getConfigPath()));
 
         System.out.println(animalConfig);
 
@@ -31,16 +36,18 @@ public class FeedService {
             case "mouse" -> animalConfig.getChanceOfEating().getMouse();
             case "rabbit" -> animalConfig.getChanceOfEating().getRabbit();
             case "sheep" -> animalConfig.getChanceOfEating().getSheep();
+
             default -> throw new IllegalArgumentException();
         };
 
-//        chanceOfEat = animal.getChanceConfig().get(eatingAnimal.getType());
-//        int random = random.nextInt(0, 100);
-//
-//        if (random >= chanceOfEat) {
-//            animal.setSaturationOfEat(eatingAnimal.getSaturationOfEat());
-//            isAnimalFeeding = true;
-//        }
+        System.out.println(chanceOfEat);
+
+        int randomChanceForAnimal = generateRandomService.random(0, 100);
+
+        if (randomChanceForAnimal >= chanceOfEat) {
+            animal.setSaturationOfEat(animal.getSaturationOfEat() + eatingAnimalConfig.getSaturationOfEat());
+            isAnimalFeeding = true;
+        }
 
         return isAnimalFeeding;
     }

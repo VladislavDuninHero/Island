@@ -11,5 +11,5 @@ import org.island.dto.config.AnimalConfig;
 public class Caterpillar extends Herbivore {
     private final String type = "caterpillar";
 
-    private final double weight = 0.01;
+    private String configPath = "src/main/resources/herbivoreAnimals/Caterpillar.json";
 }

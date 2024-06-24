@@ -11,5 +11,5 @@ import org.island.dto.config.AnimalConfig;
 public class Mouse extends Herbivore {
     private final String type = "mouse";
 
-    private final double weight = 0.05;
+    private String configPath = "src/main/resources/herbivoreAnimals/Mouse.json";
 }

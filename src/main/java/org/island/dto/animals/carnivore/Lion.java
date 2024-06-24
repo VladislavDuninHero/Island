@@ -11,6 +11,6 @@ import org.island.dto.config.AnimalConfig;
 public class Lion extends Carnivore {
     private final String type = "lion";
 
-    private final double weight = 200;
+    private String configPath = "src/main/resources/carnivoreAnimals/Lion.json";
 
 }

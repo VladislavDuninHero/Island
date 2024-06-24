@@ -12,5 +12,5 @@ public class Rabbit extends Herbivore {
 
     private final String type = "rabbit";
 
-    private final double weight = 2;
+    private String configPath = "src/main/resources/herbivoreAnimals/Rabbit.json";
 }

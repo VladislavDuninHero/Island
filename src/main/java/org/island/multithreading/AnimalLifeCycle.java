@@ -2,6 +2,7 @@ package org.island.multithreading;
 
 import lombok.AllArgsConstructor;
 import org.island.controllers.ActionService;
+import org.island.controllers.animalsServices.reproduceServices.ReproduceService;
 import org.island.controllers.animalsServices.feedingServices.EatingAnimalsService;
 import org.island.controllers.animalsServices.MovingService;
 import org.island.dto.AbstractIslandObject;
@@ -10,7 +11,7 @@ import org.island.dto.Island.Coordinate;
 import org.island.dto.Island.Island;
 import org.island.dto.actions.Actions;
 import org.island.dto.animals.Animal;
-
+//todo дописать реализацию "FeedService" для травоядных
 @AllArgsConstructor
 public class AnimalLifeCycle implements Runnable {
     private final Island island;
@@ -22,6 +23,7 @@ public class AnimalLifeCycle implements Runnable {
         MovingService movingService = new MovingService();
         EatingAnimalsService eatingAnimalsService = new EatingAnimalsService();
         ActionService actionService = new ActionService();
+        ReproduceService reproduceService = new ReproduceService();
 
         for (int i = 0; i < myIsland.length; i++) {
             for (int j = 0; j < myIsland[i].length; j++) {
@@ -40,7 +42,16 @@ public class AnimalLifeCycle implements Runnable {
 
                         if (action == Actions.EAT) {
                             eatingAnimalsService.startFeeding(
-                                    myIsland[i][j].getOrganisms(), myIsland[i][j].getOrganisms().get(k));
+                                    myIsland[i][j].getOrganisms(),
+                                    myIsland[i][j].getOrganisms().get(k)
+                            );
+                        }
+
+                        if (action == Actions.REPRODUCE) {
+                            reproduceService.reproduce(
+                                    myIsland[i][j].getOrganisms(),
+                                    myIsland[i][j].getOrganisms().get(k)
+                            );
                         }
                     }
                 }

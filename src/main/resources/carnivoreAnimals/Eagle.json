@@ -2,5 +2,17 @@
   "weight": 6,
   "maxCountInOneCell": 20,
   "maxCountCellInStep": 3,
-  "saturationOfEat": 1
+  "saturationOfEat": 1,
+  "chanceOfEating": {
+    "self": 0,
+    "bear": 0,
+    "eagle": 0,
+    "lion": 0,
+    "buffalo": 20,
+    "caterpillar": 0,
+    "hog": 50,
+    "mouse": 90,
+    "rabbit": 80,
+    "sheep": 70
+  }
 }

@@ -11,5 +11,5 @@ import org.island.dto.config.AnimalConfig;
 public class Eagle extends Carnivore {
     private final String type = "eagle";
 
-    private final double weight = 6;
+    private String configPath = "src/main/resources/carnivoreAnimals/Eagle.json";
 }

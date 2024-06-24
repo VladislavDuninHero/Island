@@ -17,8 +17,6 @@ import java.util.Map;
 public class Wolf extends Carnivore {
     private final String type = "wolf";
 
-    private final double weight = 50;
-
     private String configPath = "src/main/resources/carnivoreAnimals/Wolf.json";
 
 }

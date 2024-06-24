@@ -11,5 +11,5 @@ import org.island.dto.config.AnimalConfig;
 public class Buffalo extends Herbivore {
     private final String type = "buffalo";
 
-    private final double weight = 700;
+    private String configPath = "src/main/resources/herbivoreAnimals/Buffalo.json";
 }

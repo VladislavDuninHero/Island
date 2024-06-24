@@ -19,9 +19,11 @@ public class EatingAnimalsService {
             return;
         }
 
-        feedService.feed((Animal) who, animal);
+        boolean resultOfEat = feedService.feed((Animal) who, animal);
 
-        organisms.remove(animal);
+        if (resultOfEat) {
+            organisms.remove(animal);
+        }
 
     }
 }

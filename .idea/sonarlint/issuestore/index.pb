@@ -110,3 +110,9 @@ Usrc/main/java/org/island/controllers/animalsServices/feedingServices/FeedServic
 Osrc/main/java/org/island/controllers/animalsServices/ContainsAnimalService.java,b\0\b02d5d627c54abd533abdf8fc1f59986479a3f81
 h
 8src/main/java/org/island/dto/config/ChancesOfEating.java,1\5\15f7cc0d8a8ca3471208b94e410aa75458f2687c
+z
+Jsrc/main/java/org/island/controllers/animalsServices/ReproduceService.java,5\9\598f8253336d287ee95589e8bdd424f7ea9894ed
+Œ
+\src/main/java/org/island/controllers/animalsServices/reproduceServices/ReproduceService.java,a\4\a40f7d1e4153aa0f5be4fe10f88c3a951e0c06c8
+˜
+hsrc/main/java/org/island/controllers/animalsServices/reproduceServices/FindAnimalToReproduceService.java,4\0\402ff652ca2459e8dd2a826068d797442ed8fad4

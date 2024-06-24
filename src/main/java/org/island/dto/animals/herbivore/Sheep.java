@@ -11,5 +11,5 @@ import org.island.dto.config.AnimalConfig;
 public class Sheep extends Herbivore {
     private final String type = "sheep";
 
-    private final double weight = 70;
+    private String configPath = "src/main/resources/herbivoreAnimals/Sheep.json";
 }

@@ -9,5 +9,5 @@ import org.island.dto.animals.Carnivore;
 public class Bear extends Carnivore {
     private final String type = "bear";
 
-    private final double weight = 500;
+    private String configPath = "src/main/resources/carnivoreAnimals/Bear.json";
 }
