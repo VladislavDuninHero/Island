@@ -1,6 +1,10 @@
 {
+  "type": "sheep",
   "weight": 70,
   "maxCountInOneCell": 140,
   "maxCountCellInStep": 3,
-  "saturationOfEat": 15
+  "saturationOfEat": 15,
+  "chanceOfEating": {
+    "herb": 100
+  }
 }

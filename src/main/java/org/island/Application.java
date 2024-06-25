@@ -3,7 +3,7 @@ package org.island;
 import org.island.controllers.*;
 import org.island.controllers.islandServices.FillIslandService;
 import org.island.controllers.islandServices.GenerateIslandService;
-import org.island.dto.Island.Island;
+import org.island.models.island.Island;
 import org.island.factory.AnimalsFactory;
 import org.island.factory.PlantsFactory;
 import org.island.view.UserInterfaceRunner;

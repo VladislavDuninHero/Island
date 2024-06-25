@@ -1,8 +1,8 @@
-package org.island.dto.animals;
+package org.island.models.animals;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.island.dto.AbstractIslandObject;
+import org.island.models.AbstractIslandObject;
 
 @Getter
 @Setter

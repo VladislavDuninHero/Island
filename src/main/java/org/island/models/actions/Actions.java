@@ -1,4 +1,4 @@
-package org.island.dto.actions;
+package org.island.models.actions;
 
 public enum Actions {
     MOVE,

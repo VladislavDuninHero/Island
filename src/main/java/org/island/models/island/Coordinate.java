@@ -1,4 +1,4 @@
-package org.island.dto.Island;
+package org.island.models.island;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

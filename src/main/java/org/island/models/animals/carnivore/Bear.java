@@ -1,8 +1,8 @@
-package org.island.dto.animals.carnivore;
+package org.island.models.animals.carnivore;
 
 import lombok.Getter;
 import lombok.ToString;
-import org.island.dto.animals.Carnivore;
+import org.island.models.animals.Carnivore;
 
 @ToString
 @Getter

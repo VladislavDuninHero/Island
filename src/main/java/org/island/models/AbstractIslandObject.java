@@ -1,4 +1,4 @@
-package org.island.dto;
+package org.island.models;
 
 import lombok.Getter;
 

@@ -1,14 +1,11 @@
 package org.island.controllers.animalsServices.reproduceServices;
 
 import org.island.controllers.GenerateRandomService;
-import org.island.dto.AbstractIslandObject;
-import org.island.dto.Island.Cell;
-import org.island.dto.animals.Animal;
+import org.island.models.AbstractIslandObject;
+import org.island.models.animals.Animal;
 import org.island.factory.AnimalsFactory;
 
 import java.util.List;
-import java.util.Map;
-import java.util.function.Supplier;
 
 public class ReproduceService {
 

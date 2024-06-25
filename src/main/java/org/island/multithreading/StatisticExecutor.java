@@ -1,8 +1,7 @@
 package org.island.multithreading;
 
 import org.island.controllers.CalculateStatisticService;
-import org.island.dto.Island.Island;
-import utils.PrintIsland;
+import org.island.models.island.Island;
 
 public class StatisticExecutor implements Runnable {
 

@@ -1,10 +1,8 @@
-package org.island.dto.animals.herbivore;
+package org.island.models.animals.herbivore;
 
 import lombok.Getter;
 import lombok.ToString;
-import org.island.controllers.GetConfigsService;
-import org.island.dto.animals.Herbivore;
-import org.island.dto.config.AnimalConfig;
+import org.island.models.animals.Herbivore;
 
 @Getter
 @ToString

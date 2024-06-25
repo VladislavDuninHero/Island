@@ -2,8 +2,8 @@ package org.island.controllers.islandServices;
 
 import lombok.AllArgsConstructor;
 import org.island.controllers.GenerateRandomService;
-import org.island.dto.Island.Cell;
-import org.island.dto.Island.Island;
+import org.island.models.island.Cell;
+import org.island.models.island.Island;
 import org.island.factory.AnimalsFactory;
 import org.island.factory.PlantsFactory;
 import utils.PrintIsland;

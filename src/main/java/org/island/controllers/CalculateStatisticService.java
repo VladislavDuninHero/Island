@@ -1,16 +1,13 @@
 package org.island.controllers;
 
-import org.island.dto.AbstractIslandObject;
-import org.island.dto.Island.Cell;
-import org.island.dto.Island.Island;
-import org.island.dto.animals.Animal;
-import org.island.dto.animals.Carnivore;
-import org.island.dto.animals.Herbivore;
-import org.island.dto.plants.Plant;
+import org.island.models.AbstractIslandObject;
+import org.island.models.island.Cell;
+import org.island.models.island.Island;
+import org.island.models.animals.Carnivore;
+import org.island.models.animals.Herbivore;
+import org.island.models.plants.Plant;
 import utils.PrintIsland;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,17 +1,14 @@
 package org.island.factory;
 
 import lombok.Getter;
-import org.island.controllers.SerializationJsonService;
-import org.island.dto.animals.Animal;
-import org.island.dto.animals.carnivore.Bear;
-import org.island.dto.animals.carnivore.Eagle;
-import org.island.dto.animals.carnivore.Lion;
-import org.island.dto.animals.carnivore.Wolf;
-import org.island.dto.animals.herbivore.*;
-import org.island.dto.config.AnimalConfig;
+import org.island.models.animals.Animal;
+import org.island.models.animals.carnivore.Bear;
+import org.island.models.animals.carnivore.Eagle;
+import org.island.models.animals.carnivore.Lion;
+import org.island.models.animals.carnivore.Wolf;
 import org.island.exceptions.createAnimalException;
+import org.island.models.animals.herbivore.*;
 
-import java.io.File;
 import java.util.Map;
 import java.util.function.Supplier;
 

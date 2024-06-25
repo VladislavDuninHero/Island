@@ -1,15 +1,9 @@
-package org.island.dto.animals.carnivore;
+package org.island.models.animals.carnivore;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.ToString;
-import org.island.controllers.GetConfigsService;
-import org.island.dto.animals.Carnivore;
-import org.island.dto.config.AnimalConfig;
-
-import java.util.HashMap;
-import java.util.Map;
+import org.island.models.animals.Carnivore;
 
 @ToString
 @Getter

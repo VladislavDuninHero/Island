@@ -2,12 +2,10 @@ package org.island.controllers.animalsServices.feedingServices;
 
 import org.island.controllers.GenerateRandomService;
 import org.island.controllers.SerializationJsonService;
-import org.island.dto.AbstractIslandObject;
-import org.island.dto.animals.Animal;
+import org.island.models.animals.Animal;
 import org.island.dto.config.AnimalConfig;
 
 import java.io.File;
-import java.util.List;
 
 public class FeedService {
 
@@ -28,7 +26,6 @@ public class FeedService {
             case "bear" -> animalConfig.getChanceOfEating().getBear();
             case "wolf" -> animalConfig.getChanceOfEating().getWolf();
             case "eagle" -> animalConfig.getChanceOfEating().getEagle();
-            case "self" -> animalConfig.getChanceOfEating().getSelf();
             case "lion" -> animalConfig.getChanceOfEating().getLion();
             case "buffalo" -> animalConfig.getChanceOfEating().getBuffalo();
             case "caterpillar" -> animalConfig.getChanceOfEating().getCaterpillar();

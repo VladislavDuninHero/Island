@@ -1,10 +1,8 @@
 package org.island.controllers.islandServices;
 
 import lombok.AllArgsConstructor;
-import org.island.dto.Island.Cell;
-import org.island.dto.Island.Island;
-
-import java.util.Arrays;
+import org.island.models.island.Cell;
+import org.island.models.island.Island;
 
 @AllArgsConstructor
 public class GenerateIslandService {

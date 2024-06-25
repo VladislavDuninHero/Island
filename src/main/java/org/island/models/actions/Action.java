@@ -1,8 +1,8 @@
-package org.island.dto.actions;
+package org.island.models.actions;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.island.dto.AbstractIslandObject;
+import org.island.models.AbstractIslandObject;
 
 @Getter
 @AllArgsConstructor

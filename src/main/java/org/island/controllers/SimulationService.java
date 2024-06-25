@@ -1,11 +1,10 @@
 package org.island.controllers;
 
-import org.island.dto.Island.Cell;
-import org.island.dto.Island.Island;
+import org.island.models.island.Cell;
+import org.island.models.island.Island;
 import org.island.multithreading.AnimalLifeCycle;
 import org.island.multithreading.StatisticExecutor;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +26,9 @@ public class SimulationService {
         movingAnimals.scheduleAtFixedRate(animalLifeCycle, 0, 5, TimeUnit.SECONDS);
         calcStatistic.scheduleAtFixedRate(statisticExecutor, 0, 5, TimeUnit.SECONDS);
 
+        Runnable scheduledTask = () -> {
 
+        };
     }
 
 }

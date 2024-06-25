@@ -1,10 +1,7 @@
 package org.island.controllers;
 
 
-import org.island.dto.Island.Island;
-import org.island.dto.actions.Action;
-import org.island.dto.actions.Actions;
-import org.island.interfaces.Moveable;
+import org.island.models.actions.Actions;
 
 import java.util.List;
 import java.util.Random;

@@ -1,8 +1,8 @@
 package org.island.controllers.animalsServices.feedingServices;
 
 import org.island.controllers.GenerateRandomService;
-import org.island.dto.AbstractIslandObject;
-import org.island.dto.animals.Animal;
+import org.island.models.AbstractIslandObject;
+import org.island.models.animals.Animal;
 
 import java.util.List;
 

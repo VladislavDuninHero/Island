@@ -1,6 +1,10 @@
 {
+  "type": "mouse",
   "weight": 0.05,
   "maxCountInOneCell": 500,
   "maxCountCellInStep": 1,
-  "saturationOfEat": 0.01
+  "saturationOfEat": 0.01,
+  "chanceOfEating": {
+    "herb": 100
+  }
 }

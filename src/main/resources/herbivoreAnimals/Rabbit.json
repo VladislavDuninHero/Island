@@ -1,6 +1,10 @@
 {
+  "type": "rabbit",
   "weight": 2,
   "maxCountInOneCell": 150,
   "maxCountCellInStep": 2,
-  "saturationOfEat": 0.45
+  "saturationOfEat": 0.45,
+  "chanceOfEating": {
+    "herb": 100
+  }
 }

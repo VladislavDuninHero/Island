@@ -1,8 +1,8 @@
-package org.island.dto.Island;
+package org.island.models.island;
 
 
 import lombok.Getter;
-import org.island.dto.AbstractIslandObject;
+import org.island.models.AbstractIslandObject;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

@@ -1,10 +1,10 @@
-package org.island.controllers.animalsServices;
+package org.island.controllers.animalsServices.movingServices;
 
 import org.island.controllers.GenerateRandomService;
-import org.island.dto.Island.Cell;
-import org.island.dto.Island.Coordinate;
-import org.island.dto.Island.Island;
-import org.island.dto.animals.Animal;
+import org.island.models.island.Cell;
+import org.island.models.island.Coordinate;
+import org.island.models.island.Island;
+import org.island.models.animals.Animal;
 
 public class MovingService {
 

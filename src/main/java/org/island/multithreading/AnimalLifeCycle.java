@@ -4,13 +4,13 @@ import lombok.AllArgsConstructor;
 import org.island.controllers.ActionService;
 import org.island.controllers.animalsServices.reproduceServices.ReproduceService;
 import org.island.controllers.animalsServices.feedingServices.EatingAnimalsService;
-import org.island.controllers.animalsServices.MovingService;
-import org.island.dto.AbstractIslandObject;
-import org.island.dto.Island.Cell;
-import org.island.dto.Island.Coordinate;
-import org.island.dto.Island.Island;
-import org.island.dto.actions.Actions;
-import org.island.dto.animals.Animal;
+import org.island.controllers.animalsServices.movingServices.MovingService;
+import org.island.models.AbstractIslandObject;
+import org.island.models.island.Cell;
+import org.island.models.island.Coordinate;
+import org.island.models.island.Island;
+import org.island.models.actions.Actions;
+import org.island.models.animals.Animal;
 //todo дописать реализацию "FeedService" для травоядных
 @AllArgsConstructor
 public class AnimalLifeCycle implements Runnable {

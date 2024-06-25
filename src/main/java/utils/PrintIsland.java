@@ -1,7 +1,7 @@
 package utils;
 
-import org.island.dto.Island.Cell;
-import org.island.dto.Island.Island;
+import org.island.models.island.Cell;
+import org.island.models.island.Island;
 
 import java.util.Map;
 

@@ -5,7 +5,7 @@
   "maxCountCellInStep": 3,
   "saturationOfEat": 8,
   "chanceOfEating": {
-    "self": 0,
+    "wolf": 0,
     "bear": 0,
     "eagle": 0,
     "lion": 0,

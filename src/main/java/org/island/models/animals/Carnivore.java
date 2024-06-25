@@ -1,4 +1,4 @@
-package org.island.dto.animals;
+package org.island.models.animals;
 
 public abstract class Carnivore extends Animal {
 }
