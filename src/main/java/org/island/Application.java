@@ -1,31 +1,19 @@
 package org.island;
 
-import org.island.controllers.*;
-import org.island.controllers.islandServices.FillIslandService;
-import org.island.controllers.islandServices.GenerateIslandService;
-import org.island.models.island.Island;
-import org.island.factory.AnimalsFactory;
-import org.island.factory.PlantsFactory;
-import org.island.view.UserInterfaceRunner;
+import org.island.service.island.GenerateIslandService;
+import org.island.view.UserInterface;
 
 public class Application {
-    UserInterfaceRunner userInterfaceRunner = new UserInterfaceRunner();
-    GenerateIslandService generateIslandService = new GenerateIslandService(2, 2);
-    FillIslandService fillIslandService = new FillIslandService(
-            new AnimalsFactory(),
-            new PlantsFactory(),
-            new GenerateRandomService()
-    );
-    SimulationService simulationService = new SimulationService();
+    UserInterface userInterface = new UserInterface();
 
-    public void start() {
-        userInterfaceRunner.run();
+    GenerateIslandService generateIslandService = new GenerateIslandService();
+    public void run() {
+        //view
+        userInterface.initiateView();
 
-        Island island = generateIslandService.generate();
+        //generate island
+        generateIslandService.generateIsland();
 
-        fillIslandService.fillIsland(island);
-
-        simulationService.runSimulation(island);
-
+        //
     }
 }
