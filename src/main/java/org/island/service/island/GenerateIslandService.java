@@ -1,15 +1,17 @@
 package org.island.service.island;
 
-import org.island.dto.IslandConfig;
+import org.island.dto.island.IslandConfig;
 import org.island.model.island.Cell;
 import org.island.model.island.Island;
 import org.island.service.serialization.ReadJsonService;
+import org.island.service.utils.RandomService;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class GenerateIslandService {
 
     ReadJsonService readJsonService = new ReadJsonService();
+    RandomService randomService = new RandomService();
 
     public Island generateIsland() {
         IslandConfig islandConfig = readJsonService.readJson("src/main/resources/config.json", IslandConfig.class);
@@ -17,18 +19,12 @@ public class GenerateIslandService {
         Island newIsland = new Island();
 
         for (int i = 0; i < islandConfig.getX(); i++) {
+            newIsland.getIsland().add(new CopyOnWriteArrayList<>());
             for (int j = 0; j < islandConfig.getY(); j++) {
-                newIsland.getIsland().add(new CopyOnWriteArrayList<>());
+                newIsland.getIsland().get(i).add(new Cell(i, j));
             }
+            System.out.println(newIsland.getIsland().get(i));
         }
-
-        for (int i = 0; i < newIsland.getIsland().size(); i++) {
-            for (int j = 0; j < newIsland.getIsland().get(i).size(); j++) {
-                newIsland.getIsland().get(j).add(new Cell(i, j));
-            }
-        }
-
-        System.out.println(newIsland);
 
         return newIsland;
     }

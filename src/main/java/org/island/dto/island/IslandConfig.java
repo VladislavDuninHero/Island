@@ -1,4 +1,4 @@
-package org.island.dto;
+package org.island.dto.island;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -11,4 +11,7 @@ public class IslandConfig {
 
     @JsonProperty
     private int y;
+
+    @JsonProperty
+    private int maxCells;
 }

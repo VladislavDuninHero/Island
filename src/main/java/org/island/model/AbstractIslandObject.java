@@ -1,4 +1,9 @@
 package org.island.model;
 
-public interface AbstractIslandObject {
+import lombok.Getter;
+
+@Getter
+public abstract class AbstractIslandObject {
+    private String type;
+    private String config;
 }

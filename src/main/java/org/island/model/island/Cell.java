@@ -14,6 +14,8 @@ public class Cell {
     private final int x;
     private final int y;
 
+    private final String type = "Cell";
+
     public Cell(int x, int y) {
         this.x = x;
         this.y = y;
