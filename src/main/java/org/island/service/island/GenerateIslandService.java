@@ -16,7 +16,7 @@ public class GenerateIslandService {
     public Island generateIsland() {
         IslandConfig islandConfig = readJsonService.readJson("src/main/resources/config.json", IslandConfig.class);
 
-        Island newIsland = new Island();
+        Island newIsland = Island.getInstance();
 
         for (int i = 0; i < islandConfig.getX(); i++) {
             newIsland.getIsland().add(new CopyOnWriteArrayList<>());

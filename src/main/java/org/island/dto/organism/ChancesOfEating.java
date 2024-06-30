@@ -3,25 +3,15 @@ package org.island.dto.organism;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
-
-
+import lombok.ToString;
 
 @Getter
+@ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class OrganismConfig {
+public class ChancesOfEating {
     @JsonProperty
-    private String type;
+    private int wolf;
 
     @JsonProperty
-    private double weight;
-
-    @JsonProperty
-    private int maxSpeed;
-
-    @JsonProperty
-    private int maxCount;
-
-    @JsonProperty
-    private ChancesOfEating chancesOfEating;
-
+    private int sheep;
 }

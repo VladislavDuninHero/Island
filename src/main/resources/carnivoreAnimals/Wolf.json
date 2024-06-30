@@ -3,7 +3,7 @@
   "weight": 50,
   "maxCount": 30,
   "maxSpeed": 3,
-  "chanceOfEating": {
+  "chancesOfEating": {
     "wolf": 0,
     "bear": 0,
     "eagle": 0,
