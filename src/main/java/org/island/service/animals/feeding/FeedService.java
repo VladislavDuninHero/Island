@@ -20,6 +20,12 @@ public class FeedService {
         if (animal instanceof Carnivore) {
             Animal eatingAnimal = findOrganismForEatService.findAnimalForEat(cell);
 
+            if (eatingAnimal == null) {
+                cell.getOrganisms().remove(animal);
+
+                return false;
+            }
+
             int randomChance = randomService.random(0, 100);
 
             Map<String, Object> chancesOfEating = readJsonService.readJsonTreeToMap(animal.getConfig(), "chancesOfEating");
@@ -35,6 +41,7 @@ public class FeedService {
 
                 return false;
             }
+
         }
 
         if (animal instanceof Herbivore) {

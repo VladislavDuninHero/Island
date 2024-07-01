@@ -6,6 +6,7 @@ import org.island.model.island.Island;
 import org.island.model.organisms.animals.Animal;
 import org.island.service.animals.feeding.FeedService;
 import org.island.service.animals.moving.MovingService;
+import org.island.service.animals.reproducing.ReproduceService;
 
 import java.util.List;
 import java.util.concurrent.ScheduledExecutorService;
@@ -15,6 +16,7 @@ public class AnimalLifeCycleService {
 
     MovingService movingService = new MovingService();
     FeedService feedService = new FeedService();
+    ReproduceService reproduceService = new ReproduceService();
     Island island = Island.getInstance();
 
     public void runAnimalLifeCycle(ScheduledExecutorService executorService) {
@@ -24,8 +26,9 @@ public class AnimalLifeCycleService {
                     List<AbstractIslandObject> listOfOrganisms = cell.getOrganisms();
                     for (AbstractIslandObject organism : listOfOrganisms) {
                         if (organism instanceof Animal animal) {
+                            boolean isFeed = feedService.feed(animal, cell);
+                            reproduceService.reproduceAnimal(animal, cell);
                             movingService.move(animal, cell, row);
-                            feedService.feed(animal, cell);
                         }
                     }
                 }

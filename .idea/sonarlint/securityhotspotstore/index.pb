@@ -202,3 +202,5 @@ R
 "src/test/java/EatAnimalsTests.java,d\d\dd61daa402f65f3c45aa837c2e470fb0c3379bf1
 j
 :src/main/java/org/island/dto/organism/ChancesOfEating.java,e\a\ea08fb7f5fad27a9e01ef16e23b1780561947a77
+V
+&src/test/java/LifeCycleAnimalTest.java,f\c\fc7063e72b3db4bb31ffc2c8a61eb5d06a115007

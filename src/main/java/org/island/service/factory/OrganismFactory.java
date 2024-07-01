@@ -2,6 +2,7 @@ package org.island.service.factory;
 
 import lombok.Getter;
 import org.island.model.AbstractIslandObject;
+import org.island.model.organisms.animals.Animal;
 import org.island.model.organisms.animals.Sheep;
 import org.island.model.organisms.animals.Wolf;
 import org.island.model.organisms.plants.Herb;
@@ -26,5 +27,16 @@ public class OrganismFactory {
         }
 
         return organismMap.get(id).get();
+    }
+
+    public int getOrganismIdOnClassBased(Class<? extends Animal> clazz) {
+        int id = 0;
+        for (Map.Entry<Integer, Supplier<AbstractIslandObject>> organism : organismMap.entrySet()) {
+            if (clazz == organism.getValue().get().getClass()) {
+                id = organism.getKey();
+            }
+        }
+
+        return id;
     }
 }

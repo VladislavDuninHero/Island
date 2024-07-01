@@ -5,9 +5,6 @@ import org.island.model.island.Cell;
 import org.island.model.island.Island;
 import org.island.service.factory.OrganismFactory;
 import org.island.service.utils.RandomService;
-import org.island2.models.animals.Animal;
-
-import java.util.List;
 
 public class FillIslandService {
 
