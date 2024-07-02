@@ -204,3 +204,5 @@ j
 :src/main/java/org/island/dto/organism/ChancesOfEating.java,e\a\ea08fb7f5fad27a9e01ef16e23b1780561947a77
 V
 &src/test/java/LifeCycleAnimalTest.java,f\c\fc7063e72b3db4bb31ffc2c8a61eb5d06a115007
+p
+@src/main/java/org/island/service/animals/dying/DyingService.java,2\0\20d06e36316b07ff01ecf980f3c037618bbacf22

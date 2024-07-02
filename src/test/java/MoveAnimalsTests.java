@@ -1,5 +1,6 @@
 import org.island.model.AbstractIslandObject;
 import org.island.model.island.Cell;
+import org.island.model.island.Island;
 import org.island.model.organisms.animals.Animal;
 import org.island.service.animals.moving.MovingService;
 import org.island.service.factory.OrganismFactory;
@@ -13,15 +14,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MoveAnimalsTests {
 
-    List<Cell> row = new CopyOnWriteArrayList<>(
+    List<Cell> firstRow = new CopyOnWriteArrayList<>(
             List.of(
                     new Cell(0, 0),
                     new Cell(0, 1),
                     new Cell(0, 2),
                     new Cell(0, 3),
-                    new Cell(0, 3)
+                    new Cell(0, 4)
             )
     );
+    List<Cell> secondRow = new CopyOnWriteArrayList<>(
+            List.of(
+                    new Cell(1, 0),
+                    new Cell(1, 1),
+                    new Cell(1, 2),
+                    new Cell(1, 3),
+                    new Cell(1, 4)
+            )
+    );
+
+    Island island = Island.getInstance();
 
     OrganismFactory organismFactory = new OrganismFactory();
 
@@ -31,20 +43,26 @@ class MoveAnimalsTests {
     void moveAnimalsTest() {
         AbstractIslandObject organism = organismFactory.createOrganism(1);
 
-        List<AbstractIslandObject> currentOrganisms = row.get(0).getOrganisms();
+        island.getIsland().add(firstRow);
+        island.getIsland().add(secondRow);
+
+        List<AbstractIslandObject> currentOrganisms = firstRow.get(0).getOrganisms();
 
         currentOrganisms.add(organism);
 
-        movingService.move((Animal) currentOrganisms.get(0), row.get(0), row);
+        movingService.move((Animal) currentOrganisms.get(0), firstRow.get(0), firstRow);
 
         assertFalse(currentOrganisms.contains(organism), "Current cell is not contains organism");
 
         boolean isContainsOrganism = false;
 
-        for (Cell cell : row) {
-            for (AbstractIslandObject cellOrganism : cell.getOrganisms()) {
-                if (cellOrganism.equals(organism)) {
-                    isContainsOrganism = true;
+        for (List<Cell> row : island.getIsland()) {
+            for (Cell cell : row) {
+                for (AbstractIslandObject cellOrganism : cell.getOrganisms()) {
+                    if (cellOrganism.equals(organism)) {
+                        isContainsOrganism = true;
+                        System.out.println("X: " + cell.getX() + ", " + "Y: " + cell.getY());
+                    }
                 }
             }
         }
@@ -57,13 +75,15 @@ class MoveAnimalsTests {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MoveAnimalsTests that = (MoveAnimalsTests) o;
-        return Objects.equals(row, that.row)
+        return Objects.equals(firstRow, that.firstRow)
+                && Objects.equals(secondRow, that.secondRow)
+                && Objects.equals(island, that.island)
                 && Objects.equals(organismFactory, that.organismFactory)
                 && Objects.equals(movingService, that.movingService);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(row, organismFactory, movingService);
+        return Objects.hash(firstRow, secondRow, island, organismFactory, movingService);
     }
 }

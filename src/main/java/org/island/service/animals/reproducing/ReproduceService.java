@@ -4,13 +4,11 @@ import org.island.dto.organism.OrganismConfig;
 import org.island.model.AbstractIslandObject;
 import org.island.model.island.Cell;
 import org.island.model.organisms.animals.Animal;
-import org.island.model.organisms.animals.Wolf;
 import org.island.service.factory.OrganismFactory;
 import org.island.service.serialization.ReadJsonService;
 import org.island.service.utils.RandomService;
 
 import java.util.List;
-import java.util.Map;
 
 public class ReproduceService {
 
@@ -29,7 +27,10 @@ public class ReproduceService {
             Class<? extends Animal> clazz = animal.getClass();
 
             for (AbstractIslandObject organism : organisms) {
-                if (clazz == organism.getClass()) {
+                if (clazz == organism.getClass()
+                        && calculateAnimalCount(cell, (Animal) organism)
+                        && !(organism.equals(animal))
+                ) {
                     int organismId = organismFactory.getOrganismIdOnClassBased(clazz);
                     AbstractIslandObject childOfAnimal = organismFactory.createOrganism(organismId);
 
@@ -45,8 +46,9 @@ public class ReproduceService {
         List<AbstractIslandObject> organisms = cell.getOrganisms();
         OrganismConfig organismConfig = readJsonService.readJson(animal.getConfig(), OrganismConfig.class);
 
+        long countOfAnimal = organisms.stream().filter((el) -> el.getClass() == animal.getClass()).count();
 
-
-        return false;
+        return countOfAnimal < organismConfig.getMaxCount();
     }
+
 }
