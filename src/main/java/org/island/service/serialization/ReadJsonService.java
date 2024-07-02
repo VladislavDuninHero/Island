@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReadJsonService {
-    //todo сделать кастомный эксепшн для ошибки прочитки json
 
     @SneakyThrows
     public <T> T readJson(String jsonFile, Class<T> clazz) {

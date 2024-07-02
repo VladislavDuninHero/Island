@@ -18,6 +18,7 @@ public class MovingService {
 
         int randomStep = randomService.random(0, row.size());
         int randomRow = randomService.random(0, island.getIsland().size());
+
         List<AbstractIslandObject> organismsInCurrentCell = cell.getOrganisms();
         List<Cell> newRow = island.getIsland().get(randomRow);
         List<AbstractIslandObject> organismsInRandomStepCell = newRow.get(randomStep).getOrganisms();

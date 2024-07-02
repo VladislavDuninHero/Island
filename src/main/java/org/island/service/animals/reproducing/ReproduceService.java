@@ -13,6 +13,7 @@ import java.util.List;
 public class ReproduceService {
 
     OrganismFactory organismFactory = new OrganismFactory();
+
     RandomService randomService = new RandomService();
 
     ReadJsonService readJsonService = new ReadJsonService();

@@ -11,7 +11,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class GenerateIslandService {
 
     ReadJsonService readJsonService = new ReadJsonService();
-    RandomService randomService = new RandomService();
 
     public Island generateIsland() {
         IslandConfig islandConfig = readJsonService.readJson("src/main/resources/config.json", IslandConfig.class);
@@ -23,7 +22,6 @@ public class GenerateIslandService {
             for (int j = 0; j < islandConfig.getY(); j++) {
                 newIsland.getIsland().get(i).add(new Cell(i, j));
             }
-            System.out.println(newIsland.getIsland().get(i));
         }
 
         return newIsland;

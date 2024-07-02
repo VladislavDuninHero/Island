@@ -42,11 +42,8 @@ public class Application {
 
         //Pool of animals threads
         ScheduledExecutorService scheduledAnimalLifeCycle = Executors.newScheduledThreadPool(4);
-        //todo вынести статистику и рост травы в отдельный класс
-        //todo дополнить классы многопоточности большей инкапсуляцией
         //run grow plants simulation
         ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-
         //start calculate statistic and grow plants
         Runnable task = () -> {
             growService.grow();

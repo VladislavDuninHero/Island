@@ -2,19 +2,20 @@ package org.island.service.island;
 
 
 import org.island.model.AbstractIslandObject;
-import org.island.model.island.Cell;
 import org.island.model.island.Island;
 import org.island.model.organisms.animals.Animal;
 import org.island.model.organisms.plants.Plant;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class CalculateStatisticService {
-    //todo Дополнить статистику удобным интерфейсом
     Island island = Island.getInstance();
+
     Map<String, Integer> statistic = new HashMap<>();
+
+    PrintIslandService printIslandService = new PrintIslandService();
+
     public void calculateStatistic() {
         for (int i = 0; i < island.getIsland().size(); i++) {
             for (int j = 0; j < island.getIsland().get(i).size(); j++) {
@@ -42,7 +43,7 @@ public class CalculateStatisticService {
             }
         }
 
-        System.out.println(statistic);
+        printIslandService.printStatistic(statistic);
         statistic.clear();
     }
 }
