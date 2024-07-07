@@ -2,7 +2,7 @@ package org.island.service.factory;
 
 import lombok.Getter;
 import org.island.constants.messages.Message;
-import org.island.exception.CreateOrganismsError;
+import org.island.exception.CreateOrganismsException;
 import org.island.model.AbstractIslandObject;
 import org.island.model.organisms.animals.Animal;
 import org.island.model.organisms.animals.Sheep;
@@ -24,7 +24,7 @@ public class OrganismFactory {
 
     public AbstractIslandObject createOrganism(int id) {
         if (!organismMap.containsKey(id)) {
-            throw new CreateOrganismsError(Message.CREATE_ORGANISM_ERROR);
+            throw new CreateOrganismsException(Message.CREATE_ORGANISM_ERROR);
         }
 
         return organismMap.get(id).get();

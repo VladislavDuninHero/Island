@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LifeCycleAnimalTest {
+public class TestRunAnimalLifeCycle {
 
     FeedService feedService = new FeedService();
     MovingService movingService = new MovingService();

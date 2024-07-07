@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class EatAnimalsTests {
+public class TestEatAnimals {
     FeedService feedService = new FeedService();
 
     Cell cell = new Cell(0, 0);
