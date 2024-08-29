@@ -7,7 +7,6 @@ import org.island.service.factory.OrganismFactory;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -70,20 +69,4 @@ class MoveAnimalsTests {
         assertTrue(isContainsOrganism);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        MoveAnimalsTests that = (MoveAnimalsTests) o;
-        return Objects.equals(firstRow, that.firstRow)
-                && Objects.equals(secondRow, that.secondRow)
-                && Objects.equals(island, that.island)
-                && Objects.equals(organismFactory, that.organismFactory)
-                && Objects.equals(movingService, that.movingService);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(firstRow, secondRow, island, organismFactory, movingService);
-    }
 }
